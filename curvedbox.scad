@@ -1,23 +1,7 @@
 //============================================================
-// OpenSCAD Project
-//
-// VincentD
+// adq curvedbox.
+// originally based on code by VincentD
 //============================================================
-
-/*
-    Simple box
-    Improve yourself to do what you want.
-    
-    All plate are symetrical.
-
-    Text must be inside the box.
-    Except for the Top Box.
-    ! Take care of that
-    
-    If you don't want slot between sides
-    ! Comment all the links that refeer them !    
-
-*/
 
 //------------------------------------------------------------
 // Parameters
@@ -100,7 +84,7 @@ module MountView()
                 linear_extrude(height=thickness)
                     BoxTop();
 */
-        
+
         // Back
         color("grey", 0.5)
             translate([thickness,0,0])
@@ -153,7 +137,7 @@ module FlatView()
         BoxFront();
 
     // Left
-    translate([xSize,-1,0]) 
+    translate([xSize,-1,0])
         rotate([0,0,180])
             BoxLeft();
 
@@ -176,12 +160,12 @@ module BoxTop()
             // Top Bottom - Back link
             translate([0,i,0])
             square([thickness, E]);
-            
+
             // Top Bottom - Front Link
             translate([x-thickness,i,0])
             square([thickness, E]);
         }
-        
+
         //  (x)
         /*
         for ( i = [Ex : Ex+E : x-E] )
@@ -189,13 +173,13 @@ module BoxTop()
             // Top Bottom - Left Link
             translate([i,0,0])
             square([E, thickness]);
-            
+
             // Top Bottom - Right Link
             translate([i,y-thickness,0])
             square([E, thickness]);
         }
         */
-        
+
         // Text inside for orientation
         translate([x/2,y/2,0]) rotate([0,0,90])
         text("Top", size=5, valign="center", halign="center", font=ft);
@@ -214,19 +198,19 @@ module BoxBottom()
         tabscountY = floor(alltabsspaceY / onetabspaceY);
         bufferY = ((ySize - (tabscountY * onetabspaceY)) / 2) + (tabbSizeY/2);
 
-        translate([0, 0, 0]) 
+        translate([0, 0, 0])
             square([thickness, bufferY]);
         for ( i = [bufferY + tabaSize: onetabspaceY: ySize - bufferY] )
         {
-            translate([0, i, 0]) 
+            translate([0, i, 0])
                 square([thickness, tabbSizeY]);
         }
-      
-        translate([xSize-thickness, 0, 0]) 
+
+        translate([xSize-thickness, 0, 0])
             square([thickness, bufferY]);
         for ( i = [bufferY + tabaSize: onetabspaceY: ySize - bufferY] )
         {
-            translate([xSize-thickness, i, 0]) 
+            translate([xSize-thickness, i, 0])
                 square([thickness, tabbSizeY]);
         }
 
@@ -236,24 +220,24 @@ module BoxBottom()
         tabscountX = floor(alltabsspaceX / onetabspaceX);
         bufferX = ((xSize - (tabscountX * onetabspaceX)) / 2) + (tabbSizeX/2);
 
-        translate([0, 0, 0]) 
+        translate([0, 0, 0])
             square([bufferX, thickness]);
         for ( i = [bufferX + tabaSize: onetabspaceX: xSize - bufferX] )
         {
-            translate([i, 0, 0]) 
+            translate([i, 0, 0])
                 square([tabbSizeX, thickness]);
         }
 
-        translate([0, ySize-thickness, 0]) 
+        translate([0, ySize-thickness, 0])
             square([bufferX, thickness]);
         for ( i = [bufferX + tabaSize: onetabspaceX: xSize - bufferX] )
         {
-            translate([i, ySize-thickness, 0]) 
+            translate([i, ySize-thickness, 0])
                 square([tabbSizeX, thickness]);
         }
-        
+
         // Text inside for orientation
-        translate([xSize/2,ySize/2,0]) 
+        translate([xSize/2,ySize/2,0])
             rotate([0,-180,90])
                 text("Bottom", size=5, valign="center", halign="center", font=ft);
     }
@@ -266,8 +250,8 @@ module BoxBack()
         square([zSize,ySize]);
 
         // the curved foot
-        translate([0, ySize/2, 0]) 
-            resize([18, ySize - (thickness*6)]) 
+        translate([0, ySize/2, 0])
+            resize([18, ySize - (thickness*6)])
                 circle(1);
 
         // bottom tabs
@@ -284,20 +268,20 @@ module BoxBack()
         // left tabs
         for ( i = [0 : tabbSizeZ+tabaSize : zSize] )
         {
-            translate([i,0,0]) 
+            translate([i,0,0])
                 square([tabbSizeZ, thickness]);
         }
-        
+
         // right tabs
         for ( i = [0 : tabbSizeZ+tabaSize : zSize] )
         {
-            translate([i,ySize-thickness,0]) 
+            translate([i,ySize-thickness,0])
                 square([tabbSizeZ, thickness]);
         }
-        
-        translate([zSize/2,ySize/2,0]) 
+
+        translate([zSize/2,ySize/2,0])
             rotate([0,0,-90])
-                text("Back", size=5, valign="center", halign="center", font=ft);        
+                text("Back", size=5, valign="center", halign="center", font=ft);
     }
 }
 
@@ -306,12 +290,12 @@ module BoxFront()
 	difference()
     {
         square([zSize,ySize]);
-     
+
         // the curved foot
-        translate([0, ySize/2, 0]) 
-            resize([18, ySize - (thickness*6)]) 
+        translate([0, ySize/2, 0])
+            resize([18, ySize - (thickness*6)])
                 circle(1);
-        
+
         // bottom tabs
         onetabspace = tabaSize + tabbSizeY;
         alltabsspace = ySize - (thickness * 2);
@@ -326,20 +310,20 @@ module BoxFront()
         // left tabs
         for ( i = [0 : tabbSizeZ+tabaSize : zSize] )
         {
-            translate([i,0,0]) 
+            translate([i,0,0])
                 square([tabbSizeZ, thickness]);
         }
-        
+
         // right tabs
         for ( i = [0 : tabbSizeZ+tabaSize : zSize] )
         {
-            translate([i,ySize-thickness,0]) 
+            translate([i,ySize-thickness,0])
                 square([tabbSizeZ, thickness]);
         }
-        
-        translate([zSize/2,ySize/2,0]) 
+
+        translate([zSize/2,ySize/2,0])
             rotate([0,-180,-90])
-                text("Front", size=5, valign="center", halign="center", font=ft);        
+                text("Front", size=5, valign="center", halign="center", font=ft);
     }
 }
 
@@ -349,12 +333,12 @@ module BoxLeft()
     difference()
     {
         square([xSize,zSize]);
-     
+
         // the curved foot
-        translate([xSize/2, 0, 0]) 
-            resize([xSize - (thickness*6), 18]) 
+        translate([xSize/2, 0, 0])
+            resize([xSize - (thickness*6), 18])
                 circle(1);
-        
+
         // bottom tabs
         onetabspaceX = tabaSize + tabbSizeX;
         alltabsspaceX = xSize - (thickness * 2);
@@ -372,14 +356,14 @@ module BoxLeft()
             translate([0,i,0])
                 square([thickness, tabaSize]);
         }
-        
+
         // right tabs
         for ( i = [tabbSizeZ : tabbSizeZ+tabaSize : zSize-tabaSize] )
         {
             translate([xSize-thickness,i,0])
                 square([thickness, tabaSize]);
         }
-        
+
         // Text inside for orientation
         translate([xSize/2,zSize/2,0])
             rotate([0,-180,0])
@@ -394,12 +378,12 @@ module BoxRight()
     difference()
     {
         square([xSize,zSize]);
-     
+
         // the curved foot
-        translate([xSize/2, 0, 0]) 
-            resize([xSize - (thickness*6), 18]) 
+        translate([xSize/2, 0, 0])
+            resize([xSize - (thickness*6), 18])
                 circle(1);
-        
+
         // bottom tabs
         onetabspaceX = tabaSize + tabbSizeX;
         alltabsspaceX = xSize - (thickness * 2);
@@ -417,14 +401,14 @@ module BoxRight()
             translate([0,i,0])
                 square([thickness, tabaSize]);
         }
-        
+
         // right tabs
         for ( i = [tabbSizeZ : tabbSizeZ+tabaSize : zSize-tabaSize] )
         {
             translate([xSize-thickness,i,0])
                 square([thickness, tabaSize]);
         }
-        
+
         // Text inside for orientation
         translate([xSize/2,zSize/2,0])
             rotate([0,-180,0])
