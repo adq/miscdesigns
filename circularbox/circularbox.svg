@@ -24,8 +24,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5091049"
-     inkscape:cx="249.96437"
-     inkscape:cy="928.53442"
+     inkscape:cx="336.7225"
+     inkscape:cy="869.0877"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -131,7 +131,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -140,40 +140,24 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <ellipse
-       ry="24.751173"
-       rx="24.751175"
-       cy="67.675499"
-       cx="93.638512"
-       id="path815-3"
-       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <ellipse
-       ry="22.276052"
-       rx="22.276054"
-       cy="67.675499"
-       cx="93.638512"
+       cy="63.939049"
+       cx="93.670792"
        id="path815-3-7"
-       style="fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <ellipse
-       ry="27.226288"
-       rx="27.22629"
-       cy="67.675499"
-       cx="93.638512"
+       style="fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:0.47722518;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       rx="21.261389"
+       ry="21.261387" />
+    <circle
+       cy="63.939049"
+       cx="93.670792"
        id="path815-3-5"
-       style="fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <ellipse
-       ry="24.751179"
-       rx="24.750006"
-       cy="67.757439"
-       cx="32.882751"
-       id="path815-3-56"
-       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.49998826;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <ellipse
-       ry="27.226288"
-       rx="27.22629"
-       cy="67.757439"
-       cx="32.883926"
+       style="fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:0.50953031;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="27.745235" />
+    <circle
+       cy="64.150383"
+       cx="32.260864"
        id="path815-3-5-9"
-       style="fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:0.50953019;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="27.745235" />
     <g
        id="g1544"
        transform="rotate(-90,-27.101524,74.947462)">
@@ -196,6 +180,37 @@ cut length: 13.59 mm (19.00 mm)
 gap length: 3.00 mm (3.00 mm)
 separation distance: 1.51 mm (1.50 mm)</desc>
       </path>
+    </g>
+    <g
+       id="g849">
+      <circle
+         r="25.698088"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.10382573;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path815-3-75"
+         cx="32.260864"
+         cy="64.150383" />
+      <circle
+         r="23.452623"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.09475357;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path815-3-3-3"
+         cx="32.260864"
+         cy="64.150383" />
+    </g>
+    <g
+       transform="translate(61.409927,-0.21133271)"
+       id="g849-3">
+      <circle
+         r="25.698088"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.10382573;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path815-3-75-6"
+         cx="32.260864"
+         cy="64.150383" />
+      <circle
+         r="23.452623"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.09475357;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path815-3-3-3-7"
+         cx="32.260864"
+         cy="64.150383" />
     </g>
   </g>
 </svg>
